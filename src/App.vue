@@ -21,7 +21,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #fdf6e3;
+  background-color: rgb(229, 236, 240);
 
 }
 </style>

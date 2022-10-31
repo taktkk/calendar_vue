@@ -101,12 +101,19 @@ import { ref , reactive, computed , onMounted} from "vue"
                       :key="dayNumberIndex"
                       :class="{'today':isToday(dayNumber)}"                 
                   >
-                      <span v-if="isToday(dayNumber)" id="todayStyle">Today</span>            
+                      <span v-if="isToday(dayNumber)" id="todayStyle">today</span>            
                       <span v-else>{{dayNumber}}</span>                     
                   </td>
              </tr>
           </tbody>
       </table>
+  </div>
+  
+  <div class="example-basic">
+    <el-time-picker v-model="value1" placeholder="time" /><br>
+</div>
+<div class="button">
+  <el-button type="primary">decisition</el-button>
   </div>
 </template>
 
@@ -127,7 +134,7 @@ import { ref , reactive, computed , onMounted} from "vue"
       padding: 0;
       text-align: center;
       vertical-align: middle;
-      font-weight: normal;
+      font-weight: bold;
       color: #999;
   }
   #main td {
@@ -137,26 +144,35 @@ import { ref , reactive, computed , onMounted} from "vue"
       border-top: 1px solid #ddd;
   }
   .today {
-      background-color: #fcf8e3;
+      background-color: rgb(229, 236, 240);
   }
   #header {
       font-size: 24px;
       padding: 0;
       text-align: center;
       margin-bottom: 10px; 
-      background-color: rgb(120, 195, 8);
+      background-color: rgb(163, 229, 235);
       border-bottom: 1px solid #ddd;
       display:flex;
       justify-content: space-between;
   }
   #header span{
+    font-weight: 900;
       padding:15px 20px;
       color: white;
       display: inline-block;
   }
   #todayStyle{
-    border: 1px;
-    color: green;
-    font-size: large;
+    border: solid;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(58, 129, 229);
   }
+  .example-basic  {
+  margin: 20px ;
+}
+.button{
+    margin-top: 20px;
+}
 </style>
